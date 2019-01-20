@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>
+              1  O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale
+            </h1>
+        </title>
+        <style>
+        </style>
+        <script>
+            var a = 2;
+            var b = 4;
+           
+            function comparatie(){
+               if (a<=b){
+                return true;
+            }else{
+                return false;
+            }
+            }
+            console.log(comparatie());
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html
+
+// <html>
+    <head>
+        <title>
+            <h1>
+              2  O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea
+            </h1>
+        </title>
+        <style>
+        </style>
+
+                
+    <script>
+            var a = 2;
+            var b = 4;
+            function compara(unNumar, celalaltNumar) {
+              if (unNumar < celalaltNumar) {
+                return -1;
+              } else if (unNumar === celalaltNumar) {
+                return 0;
+              } else {
+                return 1;
+              }
+            }
+            console.log(compara(a, b));
+          </script>
+                       
+    </head>
+    <body>
+        
+    </body>
+</html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>
+      3  O functie care primeste 2 valori si returneaza maximul dintre cele 2
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       
+  
+    <script>
+    
+    function maxLista(arr){
+        var max=arr[0];
+        for(var i=0;i<arr.length;i++){
+            if(max<arr[i]);{
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+    console.log(maxLista([2,4]));
+   
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>
+      4 O functie care primeste 2 valori si returneaza minimul dintre cele 2
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       
+  
+    <script>
+    
+    function minLista(arr){
+        var min=arr[0];
+        for(var i=0;i<arr.length;i++){
+            if(min<arr[i]);{
+               min=arr[arr.length-i-1];
+            }
+        }
+        return min;
+    }
+    console.log(minLista([2,4]));
+   
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>
+     5 O functie care intoarce suma primelor N numere naturale pozitive
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       
+  
+        <script>
+                    function sumaLista(arr){
+                        var suma=0;
+                        for( var i=0;i<arr.length;i++){
+                            suma=suma+arr[i];
+                        }
+                        return suma;
+                    
+                            
+                    }
+                    console.log(sumaLista([1,2,3]))
+                    </script>
+                
+    </head>
+    <body>
+    </html>
+    <!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>
+    6 O functie
+      care verifica 
+      daca N este numar prim 
+      (restul impartirii la 1 si la N ==0)
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       <script>
+           function estePrim(n){
+    for(var i=1;i<=n;i++){
+        if(n%i===0);{
+           return "nu este prim";
+        }
+    }
+    return "este prim";
+    }
+
+console.log(estePrim(7) );
+
+
+        </script>
+    
+       
+     </head>
+    <body>
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <title>
+                        <h1>
+                 7 O functie care intoarce suma primelor N numere prime
+                  
+                        </h1>
+                    </title>
+                    <style>
+                    </style>
+                   
+              
+                    <script>
+                       function sumaPrime(num) {
+            
+            var sum = 0;
+            
+            function estePrim(n) {
+                for (var i = 2; i < n; i++)
+                    if (n % i === 0) return false;
+                return n !== 1;
+            }
+            
+            for (i = 2; i <= num; i++) {
+                if (estePrim(i)) {
+                    sum += i;
+                    console.log(i);
+                   console.log(estePrim(i));
+                }
+            }
+            
+            console.log(sum);
+            return sum;
+            }
+            
+            
+            console.log(sumaPrime(10));
+                   
+            
+            
+            
+            
+                    </script>
+                </head>
+                <body>
+                    
+                </body>
+            </html
+            <!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>8 NU ESTE BUNA,
+      O functie care primeste un parametru de tip string
+       si intoarce inversul acestuia (abc => cba)
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       
+    
+           <script>
+           
+      p="1,2,3,4,5";
+      var i=0;
+      while(i<100){
+          return --i;
+          --i;
+
+      }
+
+</script>
+     
+    </head>
+    <body>
+        
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>
+    9 O functie care intoarce produsul primelor N numere impare pozitive
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       
+   
+           
+           <script>
+            function factorial(n){
+                var produs=1;
+                for(var i=2;i<n;i++){
+                    produs*=i;
+                }
+                return produs;
+            }
+            console.log(factorial(4));
+        </script>
+            
+                      
+
+    </head>
+    <body>
+        
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+<h1>2 parametri(arr - array de nr intregi si x - numar) 
+    si verifica daca x exista in array</h1>
+    </head>
+    <tytle>
+           tema 10; 2 parametri(arr - array de nr intregi si x - numar)
+             si verifica daca x exista in array
+    </tytle>
+    <style>
+    </style>
+    <script>
+        var array=[8,1,3,4];
+        var x=3;
+        function verifica(array){
+            for(var i=0;i<array.length;i++){
+                
+            }
+        }
+        console.log(verifica(array));
+    </script>
+    <body>
+
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        
+            <h1>
+               11 O functie care intoarce maximul dintr-un array primit ca parametru
+      
+            </h1>
+        
+        <style>
+        </style>
+       
+  
+        <script>
+function maxLista(arr){
+    var max=arr[0];
+    for(var i=0;i<arr.length;i++){
+        if(max<arr[i]);{
+            max=arr[i];
+        }
+    }
+    return max;
+}
+console.log(maxLista([-1,2,3,5]));
+
+
+
+
+        </script>
+    </head>
+    <body>
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    
+                        <h1>
+                  O functie care intoarce suma dintre max si min,
+                   dintr-un array primit ca parametru
+                  
+                        </h1>
+                    <title>
+                       12 O functie care intoarce suma dintre max si min,
+                   dintr-un array primit ca parametru
+                    </title>
+                    <style>
+                    </style>
+                   
+              
+                    <script>
+                       
+                       function minMaxSum (arr) {
+            
+            var min = [i];
+            var max = [j];
+            
+            
+            
+            var maxSum = 0;
+            var minSum = 0;
+            
+            for (var i = 0 ; i<arr.length ; i++) {
+              maxSum =  arr[i];
+              
+            }
+            
+            for (var j = 0 ; j<arr.length ; j--) {
+              minSum = arr[j];
+            break;
+            }if(maxSum!==minSum){
+                return maxSum+minSum;
+            }
+            
+            return minSum + " " + maxSum
+            }
+            
+            var array = [1,2,3,4,5]
+            
+            console.log(minMaxSum(array))
+                       
+            
+                    </script>
+                </head>
+                <body>
+                    
+                </body>
+            </html
+            <!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>NU CRED CA E BUNA
+                    13  O functie care verifica 
+                    daca exista duplicate intr-un array primit ca parametru
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       
+  
+    <script>
+    
+    function duplicat(arr){
+     
+        for(var i=0;i<arr.length;i++){
+            if(i-(i+1)==0){
+                return i;
+            }else{
+                
+                return true;
+            }
+        }
+        
+    }
+    console.log(duplicat([2,4,4,5,6]));
+   
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>
+        O functie care 
+        intoarce produsul numerelor pozitive 
+        intr-un array primit ca parametru
+        tema 14
+      
+            </h1>
+        </title>
+        <style>
+        </style>
+       
+  
+    <script>
+        arr=[8,1,3,4,5];
+    
+    function factorial(arr){
+                var produs=1;
+                for(var i=2;i<arr.length;i++){
+                    produs*=i;
+                }
+                return produs;
+            }
+            console.log(factorial(arr));
+   
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html
+15 NU ESTE GATA
