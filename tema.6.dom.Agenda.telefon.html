@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<style>
+			.agenda{
+				width: 600px;
+				margin: 10px;
+				padding: 20px;
+				margin-left: auto; 
+				margin-right: auto;
+				text-align: center;
+			}
+			.inputs{
+				border-radius: 5px;	
+			}
+			.sub{
+				border-radius: 5px;
+				background-color: rgb(74, 74, 189);
+			}
+            .continut{
+			background-color: rgba(153, 209, 115, 0.808);
+			border-radius: 10px;
+			width: 600px;
+			margin: 10px;
+			padding: 20px;
+			margin-left: auto; 
+			margin-right: auto;
+			text-align: center;
+			}
+.tabel{
+display:block;
+
+background-color: rgba(153, 209, 115, 0.808);
+border-radius: 10px;
+width: 600px;
+margin: 10px;
+padding: 20px;
+margin-left: auto; 
+margin-right: auto;
+text-align: center;
+}
+			.deleteBtn{
+				background-color:rgb(199, 42, 160);
+			}          
+		</style>
+
+		<script>
+
+			var persoane=[];
+			var indexEditare = -1;
+			console.log(persoane);
+			function deseneazaTabel(){
+				var str = "";
+				for(var i=0;i<persoane.length;i++){
+				
+					str += `<tr>
+								<td>${persoane[i].nume}</td>
+								<td>${persoane[i].telefon}</td>
+								<td>
+									<button class="editBtn" onclick="editeaza(${i});">MODIFICA</button>
+									<button class="deleteBtn" onclick="sterge(${i});">STERGE</button>
+								</td>
+							</tr>`;
+				
+				//console.log(str);
+		
+				//document.querySelector("table tbody").innerHTML=str;
+				if(persoane.length>0){
+					document.querySelector("table").style.classList.remove("visible");
+				}else{
+					document.querySelector("table").style.displa.add("visible");
+				}
+				}
+				console.log(str);
+		
+		document.querySelector("table tbody").innerHTML=str;
+				}
+			
+			function adauga(t,event){
+				event.preventDefault();
+				var pers = {};
+				var inputs = t.querySelectorAll("input[name]");
+				for(var i=0;i<inputs.length;i++){
+					var a = inputs[i].getAttribute("name");
+					var v = inputs[i].value;
+					pers[a] = v;
+				}
+				if(indexEditare===-1){
+					persoane.push(pers);
+				}else{
+					persoane.splice(indexEditare,1,pers);
+					indexEditare = -1;
+				}
+				if(persoane.length>0){
+					document.querySelector("table").style.display="none";
+
+				}else{
+					return confirm("nu e bine");
+				}
+				deseneazaTabel();
+				t.reset();
+			}
+			function sterge(idx){
+
+				if(confirm("Do you want to delete?")){
+					persoane.splice(idx,1);
+					deseneazaTabel();
+				}
+			}
+			function editeaza(idx){
+				var persoana = persoane[idx];
+				var inputs = document.querySelectorAll("#formAdaugare input[name]");
+				for(var i=0;i<inputs.length;i++){
+					var a = inputs[i].getAttribute("name");
+					inputs[i].value=persoana[a];	
+				}
+				console.log(idx,persoana);
+				indexEditare=idx;
+			}
+
+		</script>
+
+	</head>
+	
+		
+ 
+    <body onsubmit="deseneazaTabel();">
+        <h1 class="agenda">Agenda</h1>
+	
+    <div class="continut">
+      
+		<form id="formAdaugare" onsubmit="adauga(this,event)">
+                <label for="nume">Nume:</label>
+                <input class="inputs" name="nume" type="text" placeholder="Nume" />
+                <label for="telefon">Telefon:</label>
+            	<input class="inputs" name="telefon" type="text" placeholder="Telefon" /><br/><br/>
+				<input class="sub" type="submit" value="ADAUGA CONTACT" />
+
+		</form>
+	</div>
+	<div class="tabel" onsubmit="deseneazaTabel()">
+		<table>
+			<thead>
+				<tr>
+					<td onclick="deseneazaTabel('nume');">Nume</td>
+					<td onclick="deseneazaTabel('telefon');">Telefon</td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		</div>
+    </div>
+	</body>
+</html>
